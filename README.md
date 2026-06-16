@@ -15,7 +15,7 @@
 
 ## 🔍 Overview
 
-### Why ultra-low pruning is hard
+### Distribution Consistency under Ultra-Low Token Budgets
 
 <p align="center">
   <img width="900" src="figs/popeackl.png">

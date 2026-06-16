@@ -37,12 +37,13 @@ DCP-Prune is a two-stage framework designed for aggressive token compression. **
 
 ## 📊 Results
 
-### Results on LLaVA-1.5-7B
+### Results on LLaVA-1.5-7B and LLaVA-NeXT-7B
 
-DCP-Prune achieves the best overall performance under **64 / 32 / 16** token budgets, with especially strong robustness in the **ultra-low** setting.
+DCP-Prune achieves strong and stable performance under the **ultra-low** token regime on both **LLaVA-1.5-7B** and **LLaVA-NeXT-7B**.
 
 <p align="center">
-  <img width="900" src="figs/llava15_results_table.png">
+  <img width="49%" src="figs/llava15_7b_results.png" alt="LLaVA-1.5-7B ultra-low results">
+  <img width="49%" src="figs/llava_next_7b_results.png" alt="LLaVA-NeXT-7B ultra-low results">
 </p>
 
 ### Visualization of Selected Tokens

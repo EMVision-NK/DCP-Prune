@@ -1,0 +1,58 @@
+\documentclass[varwidth=true, border=6pt]{standalone}
+
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\definecolor{mygray}{gray}{0.92}
+\definecolor{ForestGreen}{RGB}{34,139,34}
+\definecolor{lightgreen}{rgb}{0.886,0.941,0.851}
+\newcommand{\fg}[1]{\textcolor{ForestGreen}{#1}}
+
+\begin{document}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcccccc}
+  \toprule[1.2pt]
+  \textbf{Method} & \textbf{GQA} & \textbf{MME} & \textbf{POPE} & \textbf{SQA} & \textbf{TextVQA} & \textbf{Avg.} \\
+  \midrule
+  \rowcolor{mygray}
+  \multicolumn{7}{c}{\textit{Upper Bound, 576 Tokens} \ \textbf{(100.0\%)}} \\
+  \textcolor{gray}{Vanilla} & \textcolor{gray}{61.9} & \textcolor{gray}{1862} & \textcolor{gray}{85.9} & \textcolor{gray}{69.5} & \textcolor{gray}{58.2} & \textcolor{gray}{100.0\%} \\
+  \midrule
+  \rowcolor{mygray}
+  \multicolumn{7}{c}{\textit{Retain 64 Tokens} \ \fg{$(\downarrow 88.9\%)$}} \\
+  VisionZip & 55.1 & 1690 & 80.9 & 69.0 & 55.5 & 93.7\% \\
+  HoloV     & 55.3 & 1715 & 80.3 & \textbf{69.5} & 55.4 & 94.0\% \\
+  FlowCut   & 55.6 & \textbf{1744} & 80.4 & 69.1 & 55.6 & 94.4\% \\
+  PRUNESID  & 57.1 & 1733 & 83.8 & 67.8 & 54.2 & 94.7\% \\
+  SCOPE     & 58.3 & 1698 & 83.9 & 68.6 & \textbf{56.6} & 95.8\% \\
+  \rowcolor{lightgreen!80}
+  Ours      & \textbf{58.5} & 1719 & \textbf{86.5} & 68.3 & 55.7 & \textbf{96.3\%} \\
+  \midrule
+  \rowcolor{mygray}
+  \multicolumn{7}{c}{\textit{Retain 32 Tokens} \ \fg{$(\downarrow 94.4\%)$}} \\
+  VisionZip & 51.9 & 1581 & 74.7 & 68.8 & 53.1 & 89.2\% \\
+  HoloV     & 52.8 & 1598 & 76.1 & \textbf{68.8} & 53.7 & 90.2\% \\
+  FlowCut   & 51.9 & 1558 & 75.5 & 68.3 & 52.6 & 88.8\% \\
+  PRUNESID  & 54.8 & 1592 & 82.1 & 67.8 & 52.5 & 91.5\% \\
+  SCOPE     & 56.4 & \textbf{1655} & 82.4 & 68.4 & \textbf{54.8} & 93.7\% \\
+  \rowcolor{lightgreen!80}
+  Ours      & \textbf{57.0} & 1654 & \textbf{85.0} & 68.6 & 54.3 & \textbf{94.4\%} \\
+  \midrule
+  \rowcolor{mygray}
+  \multicolumn{7}{c}{\textit{Retain 16 Tokens} \ \fg{$(\downarrow 97.2\%)$}} \\
+  VisionZip & 47.0 & 1350 & 66.6 & 67.8 & 49.8 & 81.8\% \\
+  HoloV     & 48.9 & 1444 & 70.6 & 68.1 & 50.7 & 84.8\% \\
+  FlowCut   & 48.2 & 1357 & 71.1 & 67.2 & 47.4 & 82.3\% \\
+  PRUNESID  & 50.3 & 1436 & 74.5 & 67.3 & 49.5 & 85.4\% \\
+  SCOPE     & 53.4 & 1562 & 76.9 & 68.2 & 52.0 & 89.4\% \\
+  \rowcolor{lightgreen!80}
+  Ours      & \textbf{55.1} & \textbf{1624} & \textbf{81.5} & \textbf{69.3} & \textbf{52.1} & \textbf{92.1\%} \\
+  \bottomrule[1.2pt]
+\end{tabular}
+\end{document}

@@ -57,3 +57,18 @@ The visualizations below show that DCP-Prune preserves a more representative sub
 <p align="center">
   <img width="900" src="figs/vis2.png">
 </p>
+
+---
+
+## 📚 Citation
+
+If you find this work useful, please consider citing:
+
+```bibtex
+@article{xue2026dcpprune,
+  title={DCP-Prune: Ultra-Low Token Pruning with Distribution Consistency Preservation},
+  author={Xue, Xifeng and Wang, Xiaokang and Li, Zirui and Cheng, Ming-Ming and Sun, Guolei},
+  journal={arXiv preprint arXiv:2606.16633},
+  year={2026}
+}
+```
